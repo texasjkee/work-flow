@@ -1,0 +1,10 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "nvim_tree_api"
+    ],
+    "diagnostics.disable": [
+        "unused-local",
+        "undefined-global"
+    ]
+}
