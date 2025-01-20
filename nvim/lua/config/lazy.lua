@@ -6,7 +6,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   if vim.v.shell_error ~= 0 then
     vim.api.nvim_echo({
       { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-      { out, "WarningMsg" },
+      { out,                            "WarningMsg" },
       { "\nPress any key to exit..." },
     }, true, {})
     vim.fn.getchar()
@@ -19,14 +19,15 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 -- Setup lazy.nvim
-require("lazy").setup {
-  require 'plugins.theme',
-  require 'plugins.nvim-tree',
-  require 'plugins.telescope',
-  require 'plugins.treesitter',
-  require 'plugins.autoclose',
-  require 'plugins.autocomplete',
-  require 'plugins.gitsigns',
-  require 'plugins.comment',
-  require 'plugins.lsp',
-}
+require("lazy").setup({
+  require("plugins.lsp"),
+  require("plugins.theme"),
+  require("plugins.nvim-tree"),
+  require("plugins.telescope"),
+  require("plugins.treesitter"),
+  require("plugins.autoclose"),
+  require("plugins.comment"),
+  require("plugins.null-ls"),
+  require("plugins.autocomplete"),
+  require("plugins.gitsigns"),
+})

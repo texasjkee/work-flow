@@ -23,7 +23,7 @@ return {
           },
         },
       })
-      --Background telescope
+      -- Background telescope
       local set_hl = vim.api.nvim_set_hl
         set_hl(0, "TelescopeNormal", { bg = "#000000", fg = "#e0def4" })
         set_hl(0, "TelescopeBorder", { bg = "#000000", fg = "#e0def4" })
