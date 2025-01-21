@@ -27,7 +27,8 @@ require("lazy").setup({
   require("plugins.treesitter"),
   require("plugins.autoclose"),
   require("plugins.comment"),
-  require("plugins.null-ls"),
   require("plugins.autocomplete"),
   require("plugins.gitsigns"),
+  require("plugins.formatting"),
+  require("plugins.linting"),
 })
