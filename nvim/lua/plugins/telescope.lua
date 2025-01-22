@@ -13,6 +13,11 @@ return {
 			local actions = require("telescope.actions")
 			require("telescope").setup({
 				defaults = {
+					layout_config = {
+						horizontal = { prompt_position = "top", results_width = 0.6 },
+						vertical = { mirror = false },
+					},
+					sorting_strategy = "ascending",
 					mappings = {
 						i = {
 							["<C-k>"] = actions.move_selection_previous,
