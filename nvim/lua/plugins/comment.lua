@@ -1,5 +1,6 @@
 return {
 	"numToStr/Comment.nvim",
+	event = { "BufReadPre", "BufNewFile" },
 	opts = {},
 	config = function()
 		local opts = { noremap = true, silent = true }

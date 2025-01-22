@@ -1,9 +1,11 @@
 return {
 	{
 		"hrsh7th/cmp-nvim-lsp",
+		event = "InsertEnter",
 	},
 	{
 		"L3MON4D3/LuaSnip",
+		event = "InsertEnter",
 		dependencies = {
 			"saadparwaiz1/cmp_luasnip",
 			"rafamadriz/friendly-snippets",
@@ -11,6 +13,7 @@ return {
 	},
 	{
 		"hrsh7th/nvim-cmp",
+		event = "InsertEnter",
 		config = function()
 			local cmp = require("cmp")
 			require("luasnip.loaders.from_vscode").lazy_load()
@@ -28,11 +31,11 @@ return {
 				mapping = cmp.mapping.preset.insert({
 					["<C-b>"] = cmp.mapping.scroll_docs(-4),
 					["<C-f>"] = cmp.mapping.scroll_docs(4),
-					["<C-Space>"] = cmp.mapping(function(fallback)
+					["<C-Space>"] = cmp.mapping(function()
 						if cmp.visible() then
-							cmp.close() -- Если уже открыто, закроем.
+							cmp.close()
 						else
-							cmp.complete() -- Показываем автокомплит.
+							cmp.complete()
 						end
 					end),
 					["<C-e>"] = cmp.mapping.abort(),
@@ -40,12 +43,12 @@ return {
 				}),
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
-					{ name = "luasnip" }, -- Для пользователей LuaSnip.
+					{ name = "luasnip" },
 				}, {
 					{ name = "buffer" },
 				}),
 				completion = {
-					autocomplete = false, -- Выключаем автокомплит по умолчанию.
+					autocomplete = false,
 				},
 			})
 		end,
