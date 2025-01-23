@@ -27,7 +27,7 @@ return {
 			vim.keymap.set("n", "gh", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "gD", ":Telescope lsp_definitions<CR>", { silent = true })
-			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
+			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { silent = true })
 			vim.keymap.set("n", "<leader>.", vim.lsp.buf.code_action, {})
 
 			vim.keymap.set("n", "<leader>dj", vim.diagnostic.goto_next, {})
