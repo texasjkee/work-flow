@@ -15,7 +15,7 @@ map("i", "<C-v>", '"*p', opts)
 map("v", "<C-c>", '"*y', opts)
 
 -- Save file
-map("n", "<C-s>", ':w<CR>', opts)
+map("n", "<C-s>", ":w<CR>", opts)
 
 -- Disable search highlighting
 map("n", "<C-h>", ":nohlsearch<CR>", opts)
