@@ -2,7 +2,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
 
-alias nvim="vim"
+alias vim="nvim"
 
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions copydir)
 # function copydir {
