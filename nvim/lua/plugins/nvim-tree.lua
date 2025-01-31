@@ -9,9 +9,16 @@ return {
 				enable = true,
 				update_root = true,
 			},
-			-- Set the width of the tree
 			view = {
-				width = 30,
+				width = 999,
+				side = "left",
+				preserve_window_proportions = false,
+			},
+			actions = {
+				open_file = {
+					quit_on_open = true,
+					window_picker = { enable = false },
+				},
 			},
 			renderer = {
 				icons = {
