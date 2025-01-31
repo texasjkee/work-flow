@@ -13,6 +13,7 @@ map("v", "J", ":m '>+1<CR>gv=gv", opts)
 map("n", "<C-v>", '"*p', opts)
 map("i", "<C-v>", '"*p', opts)
 map("v", "<C-c>", '"*y', opts)
+map("v", "<leader>p", '"_dP', opts)
 
 -- Save file
 map("n", "<C-s>", ":w<CR>", opts)
