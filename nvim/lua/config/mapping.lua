@@ -30,7 +30,10 @@ map("n", "<A-e>", ":NvimTreeToggle<CR>", opts)
 
 --Telescope
 map("n", "<C-p>", "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
-map("n", "<C-b>", "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
+
+map("n", "<leader><Tab>", "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
+map("n", "<C-b>", ":%bd|e#|bd#<CR>", {})
+
 map("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<CR>", opts)
 map("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<CR>", opts)
 map("n", "<leader>fn", "<cmd>lua require('telescope.builtin').git_status()<CR>", opts)
