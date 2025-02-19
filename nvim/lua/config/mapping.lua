@@ -38,3 +38,6 @@ map("n", "<C-b>", ":%bd|e#|bd#<CR>", {})
 map("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<CR>", opts)
 map("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<CR>", opts)
 map("n", "<leader>fn", "<cmd>lua require('telescope.builtin').git_status()<CR>", opts)
+
+-- Logg variable
+map("n", "<C-M-l>", ":lua require('custom.logger').log_var()<CR> ", opts)
