@@ -1,0 +1,59 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "passthrough": false,
+    "height": 30, 
+
+    "modules-left": ["hyprland/workspaces"], 
+    "modules-center": ["clock"], 
+    "modules-right": ["network","cpu", "memory", "custom/cpu_temp", "pulseaudio", "tray"], 
+
+    "hyprland/workspaces": {
+        "all-outputs": true,
+        "format": "{name}"
+    },
+    
+    "clock": {
+        // "format": "{:%H:%M}", 24 format 
+        "format": "{:%I:%M %p}",
+        "format-alt": " {:%d.%m.%Y}", 
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "default": ["", ""] 
+        },
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle", 
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",    
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"   
+    },
+    "network": {
+      "interface": "wlp0s20u5",
+      "format": "IP: {ipaddr}",
+      "format-disconnected": "Disconnected",
+      "on-click": "nm-connection-editor",
+    },
+    "custom/cpu_temp": {
+        "exec": "sensors | grep 'Core 0' | awk '{print $3}' | tr -d '+' | tr -d '°C'",
+        "interval": 5,
+        "format": "CPU: {}°C"
+    },
+    "cpu": {
+        "format": "CPU: {usage}%",
+        "tooltip": true
+    },
+
+    "memory": {
+        "format": "RAM: {percentage}%",
+        "tooltip": true
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    }
+}
