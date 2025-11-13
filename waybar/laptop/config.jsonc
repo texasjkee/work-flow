@@ -1,0 +1,76 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "passthrough": false,
+    "height": 30,
+
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["network", "cpu", "memory", "custom/cpu_temp", "battery", "pulseaudio", "tray"],
+
+    "hyprland/workspaces": {
+        "all-outputs": true,
+        "format": "{name}"
+    },
+
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "format-alt": " {:%d.%m.%Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+    },
+
+    "network": {
+        "interface": "wlp3s0",
+        "interval": 2,
+        // "format-wifi": "  {essid} {signalStrength}% | {ipaddr}",
+        "format-wifi": "  {essid} | {ipaddr}",
+        "format-ethernet": " {ipaddr}",
+        "format-disconnected": "Disconnected",
+        "format-alt": "{ifname}: {ipaddr}",
+        "on-click": "nm-connection-editor"
+    },
+
+    "custom/cpu_temp": {
+        "exec": "sensors | grep 'Tctl' | awk '{print $2}' | tr -d '+'",
+        "interval": 5,
+        "format": " {}"
+    },
+
+    "cpu": {
+        "format": "CPU: {usage}%",
+        "tooltip": true
+    },
+
+    "memory": {
+        "format": "RAM: {percentage}%",
+        "tooltip": true
+    },
+
+    "battery": {
+        "bat": "BAT0",
+        "interval": 5,
+        "format": " {capacity}%",
+        "format-charging": "⚡ {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-full": " {capacity}%"
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    }
+}
+
