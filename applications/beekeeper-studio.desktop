@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Beekeeper Studio
+Comment=Modern and easy to use SQL client for MySQL, Postgres, SQLite, SQL Server, and more.
+# Исполняемый файл может называться beekeeper-studio или beekeeper-studio-bin
+Exec=beekeeper-studio --enable-features=UseOzonePlatform --ozone-platform=wayland %U
+Icon=beekeeper-studio
+Type=Application
+Categories=Development;Database;
+Terminal=false
+StartupWMClass=beekeeper-studio
+MimeType=x-scheme-handler/beekeeper;

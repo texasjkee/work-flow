@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Docker Desktop
+Comment=Docker Desktop for Linux
+# Exec=/opt/docker-desktop/bin/docker-desktop
+# Exec=/opt/docker-desktop/bin/docker-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland
+# Exec=/opt/docker-desktop/Docker Desktop --enable-features=UseOzonePlatform --ozone-platform=wayland %U
+Exec=/opt/docker-desktop/bin/docker-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland %U
+Icon=/opt/docker-desktop/share/icon.original.png
+Type=Application
+Keywords=container;docker;
+Categories=Development;
