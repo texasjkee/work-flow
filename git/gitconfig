@@ -1,0 +1,7 @@
+[color "diff"]
+    old = "#eb6f92"       
+    new = "#3cb371"       
+    meta = "#c4a7e7"     
+    frag = "#ebbcba"    
+    commit = "#f6c177" 
+    whitespace = "#eb6f92"
